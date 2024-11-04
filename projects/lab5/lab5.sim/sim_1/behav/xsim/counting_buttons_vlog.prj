@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../../hdl/cathode_top.sv" \
+"../../../../../hdl/seven_segment.sv" \
+"../../../../../hdl/counting_buttons.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

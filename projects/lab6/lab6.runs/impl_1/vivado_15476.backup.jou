@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Mon Oct  7 14:17:11 2024
+# Process ID: 15476
+# Current directory: C:/Users/quick/Desktop/UTSAfall2024/DSD/projects/lab6/lab6.runs/impl_1
+# Command line: vivado.exe -log counting_buttons.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source counting_buttons.tcl -notrace
+# Log file: C:/Users/quick/Desktop/UTSAfall2024/DSD/projects/lab6/lab6.runs/impl_1/counting_buttons.vdi
+# Journal file: C:/Users/quick/Desktop/UTSAfall2024/DSD/projects/lab6/lab6.runs/impl_1\vivado.jou
+# Running On: DESKTOP-4G64301, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 33663 MB
+#-----------------------------------------------------------
+source counting_buttons.tcl -notrace

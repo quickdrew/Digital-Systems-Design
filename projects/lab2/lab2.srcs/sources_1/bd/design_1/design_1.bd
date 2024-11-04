@@ -1,0 +1,178 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7a100tcsg324-1",
+      "gen_directory": "../../../../lab2.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.2"
+    },
+    "design_tree": {
+      "Mux2_0": "",
+      "Mux2_1": "",
+      "Mux2_2": ""
+    },
+    "ports": {
+      "I0_0": {
+        "direction": "I"
+      },
+      "I1_0": {
+        "direction": "I"
+      },
+      "sel_0": {
+        "direction": "I"
+      },
+      "I0_1": {
+        "direction": "I"
+      },
+      "I1_1": {
+        "direction": "I"
+      },
+      "LED": {
+        "direction": "O"
+      },
+      "sel_1": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "Mux2_0": {
+        "vlnv": "xilinx.com:module_ref:Mux2:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_Mux2_0_0",
+        "xci_path": "ip\\design_1_Mux2_0_0\\design_1_Mux2_0_0.xci",
+        "inst_hier_path": "Mux2_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Mux2",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "I0": {
+            "direction": "I"
+          },
+          "I1": {
+            "direction": "I"
+          },
+          "sel": {
+            "direction": "I"
+          },
+          "Y": {
+            "direction": "O"
+          }
+        }
+      },
+      "Mux2_1": {
+        "vlnv": "xilinx.com:module_ref:Mux2:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_Mux2_1_0",
+        "xci_path": "ip\\design_1_Mux2_1_0\\design_1_Mux2_1_0.xci",
+        "inst_hier_path": "Mux2_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Mux2",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "I0": {
+            "direction": "I"
+          },
+          "I1": {
+            "direction": "I"
+          },
+          "sel": {
+            "direction": "I"
+          },
+          "Y": {
+            "direction": "O"
+          }
+        }
+      },
+      "Mux2_2": {
+        "vlnv": "xilinx.com:module_ref:Mux2:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_Mux2_2_0",
+        "xci_path": "ip\\design_1_Mux2_2_0\\design_1_Mux2_2_0.xci",
+        "inst_hier_path": "Mux2_2",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Mux2",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "I0": {
+            "direction": "I"
+          },
+          "I1": {
+            "direction": "I"
+          },
+          "sel": {
+            "direction": "I"
+          },
+          "Y": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "I0_0_1": {
+        "ports": [
+          "I0_0",
+          "Mux2_0/I0"
+        ]
+      },
+      "I0_1_1": {
+        "ports": [
+          "I0_1",
+          "Mux2_1/I0"
+        ]
+      },
+      "I1_0_1": {
+        "ports": [
+          "I1_0",
+          "Mux2_0/I1"
+        ]
+      },
+      "I1_1_1": {
+        "ports": [
+          "I1_1",
+          "Mux2_1/I1"
+        ]
+      },
+      "Mux2_0_Y": {
+        "ports": [
+          "Mux2_0/Y",
+          "Mux2_2/I0"
+        ]
+      },
+      "Mux2_1_Y": {
+        "ports": [
+          "Mux2_1/Y",
+          "Mux2_2/I1"
+        ]
+      },
+      "Mux2_2_Y": {
+        "ports": [
+          "Mux2_2/Y",
+          "LED"
+        ]
+      },
+      "sel_0_1": {
+        "ports": [
+          "sel_0",
+          "Mux2_0/sel",
+          "Mux2_1/sel"
+        ]
+      },
+      "sel_1_1": {
+        "ports": [
+          "sel_1",
+          "Mux2_2/sel"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+Time resolution is 1 ps
+Time: 0 SW = 1010 S = 00 -> LED = 0
+Time: 10 SW = 1010 S = 01 -> LED = 1
+Time: 20 SW = 1010 S = 10 -> LED = 0
+Time: 30 SW = 1010 S = 11 -> LED = z
+Time: 40 SW = 1101 S = 00 -> LED = 1
+Time: 50 SW = 1101 S = 10 -> LED = 1
+$finish called at time : 60 ns : File "C:/Users/quick/Desktop/UTSAfall2024/DSD/projects/lab2/lab2.srcs/sim_1/new/tb.v" Line 51

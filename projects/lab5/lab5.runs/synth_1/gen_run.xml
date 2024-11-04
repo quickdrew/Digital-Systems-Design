@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1727882715">
+  <File Type="PA-TCL" Name="counting_buttons.tcl"/>
+  <File Type="REPORTS-TCL" Name="counting_buttons_reports.tcl"/>
+  <File Type="RDS-RDS" Name="counting_buttons.vds"/>
+  <File Type="RDS-UTIL" Name="counting_buttons_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="counting_buttons_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="counting_buttons.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../../../../FPGA/The-FPGA-Programming-Handbook-Second-Edition-main/CH4/SystemVerilog/counting_buttons/hdl/cathode_top.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../FPGA/The-FPGA-Programming-Handbook-Second-Edition-main/CH4/SystemVerilog/counting_buttons/hdl/seven_segment.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../FPGA/The-FPGA-Programming-Handbook-Second-Edition-main/CH4/SystemVerilog/counting_buttons/hdl/counting_buttons.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="counting_buttons"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../../../../FPGA/The-FPGA-Programming-Handbook-Second-Edition-main/CH4/xdc/Nexys-A7-100T-Master.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PPRDIR/../../../../FPGA/The-FPGA-Programming-Handbook-Second-Edition-main/CH4/xdc/Nexys-A7-100T-Master.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+    <Step Id="synth_design">
+      <Option Id="IncrementalMode">2</Option>
+    </Step>
+  </Strategy>
+</GenRun>

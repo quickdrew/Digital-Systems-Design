@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/quick/Desktop/FPGA/The-FPGA-Programming-Handbook-Second-Edition-main/CH4/SystemVerilog/counting_buttons/hdl/cathode_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cathode_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/quick/Desktop/FPGA/The-FPGA-Programming-Handbook-Second-Edition-main/CH4/SystemVerilog/counting_buttons/hdl/seven_segment.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seven_segment
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/quick/Desktop/FPGA/The-FPGA-Programming-Handbook-Second-Edition-main/CH4/SystemVerilog/counting_buttons/hdl/counting_buttons.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counting_buttons
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/quick/Desktop/FPGA/The-FPGA-Programming-Handbook-Second-Edition-main/CH4/SystemVerilog/counting_buttons/build/counting_buttons.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
