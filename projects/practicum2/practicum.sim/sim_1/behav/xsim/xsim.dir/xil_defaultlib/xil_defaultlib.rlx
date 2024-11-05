@@ -1,0 +1,9 @@
+0.7
+2020.2
+Oct 13 2023
+20:47:58
+C:/Users/quick/Desktop/UTSAfall2024/DSD/projects/practicum2/practicum.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/quick/Desktop/UTSAfall2024/DSD/projects/practicum2/practicum.srcs/sim_1/new/tb.v,1730748028,verilog,,,,practicum_tb,,uvm,,,,,,
+C:/Users/quick/Desktop/UTSAfall2024/DSD/projects/practicum2/practicum.srcs/sources_1/imports/sources_1/imports/hdl/cathode_top.sv,1729890884,systemVerilog,,C:/Users/quick/Desktop/UTSAfall2024/DSD/projects/practicum2/practicum.srcs/sources_1/imports/sources_1/imports/hdl/seven_segment.sv,,cathode_top,,uvm,,,,,,
+C:/Users/quick/Desktop/UTSAfall2024/DSD/projects/practicum2/practicum.srcs/sources_1/imports/sources_1/imports/hdl/seven_segment.sv,1729887031,systemVerilog,,C:/Users/quick/Desktop/UTSAfall2024/DSD/projects/practicum2/practicum.srcs/sources_1/imports/sources_1/new/top.sv,,seven_segment,,uvm,,,,,,
+C:/Users/quick/Desktop/UTSAfall2024/DSD/projects/practicum2/practicum.srcs/sources_1/imports/sources_1/new/top.sv,1730747735,systemVerilog,,,,clock_divider_1Hz;practicum,,uvm,,,,,,
