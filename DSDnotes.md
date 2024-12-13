@@ -23,6 +23,7 @@
     - [Synchronous 4-bit Up/Down Counter](#synchronous-4-bit-updown-counter-74hc192)
     - [SR Latch](#sr-latch)
 - [Nexys A7](#7-segment-display)
+- [To Do](#to-do)
 
 # Verilog Basics
 ## Data Types
@@ -845,3 +846,12 @@ endmodule
 [Nexys A7 Reference Manual](https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual)
 
 ![7 Segment Display](pictures/nexys_segment_display.png)
+
+
+
+
+# To do
+1. Bypass capacitors required in FPGAs
+2. Division, except by powers of 2 is not supported in Vivado
+3. If you use an if statement, but don’t have an else, the synthesizer may create a latch you did not expect.
+4. Synthesis vs implementation
