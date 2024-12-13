@@ -1,0 +1,98 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Thu Nov 28 11:13:58 2024
+| Host         : DESKTOP-4G64301 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file final_proj_control_sets_placed.rpt
+| Design       : final_proj
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    20 |
+|    Minimum number of control sets                        |    20 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    68 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    20 |
+| >= 0 to < 4        |     4 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     6 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              94 |           50 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              16 |            7 |
+| Yes          | No                    | No                     |             105 |           30 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              37 |           12 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------------------+-----------------------------------------+-----------------------------------------+------------------+----------------+--------------+
+|               Clock Signal              |              Enable Signal              |             Set/Reset Signal            | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------------------------+-----------------------------------------+-----------------------------------------+------------------+----------------+--------------+
+|  slow_tim_reg_BUFG                      | usm1/USN_reg0                           | usm1/USN_reg_i_1_n_0                    |                1 |              1 |         1.00 |
+|  vga_instance/v1/clk_inst/inst/clk_out1 |                                         |                                         |                1 |              1 |         1.00 |
+|  vga_instance/v1/E[0]                   |                                         |                                         |                1 |              2 |         2.00 |
+|  vga_instance/v1/clk_inst/inst/clk_out1 | vga_instance/v1/xCount[9]_i_1_n_0       | vga_instance/v1/yCount[9]_i_1_n_0       |                2 |              3 |         1.50 |
+|  slow_tim_reg_BUFG                      |                                         |                                         |                4 |              4 |         1.00 |
+|  slow_tim_reg_BUFG                      | usm1/USN_reg_i_1_n_0                    | usm1/usn_pulse_count[3]_i_1_n_0         |                1 |              4 |         4.00 |
+|  CLK_IBUF_BUFG                          |                                         | ust1/clear                              |                2 |              6 |         3.00 |
+|  vga_instance/v1/clk_inst/inst/clk_out1 | vga_instance/v1/xCount[9]_i_1_n_0       |                                         |                2 |              6 |         3.00 |
+|  CLK_IBUF_BUFG                          | usm1/seg_state_reg[2]_inv_n_0           |                                         |                3 |              8 |         2.67 |
+|  slow_tim_reg_BUFG                      | pmw1/pwm_duty_period_length[10]_i_1_n_0 |                                         |                3 |             10 |         3.33 |
+|  vga_instance/v1/clk_inst/inst/clk_out1 |                                         | vga_instance/v1/xCount[9]_i_1_n_0       |                5 |             10 |         2.00 |
+|  segt1/slow_tim_reg_reg_0               |                                         |                                         |                4 |             12 |         3.00 |
+|  slow_tim_reg_BUFG                      | pmw1/PWM_reg_i_1_n_0                    | pmw1/pwm_duty_period_length[10]_i_1_n_0 |                4 |             13 |         3.25 |
+|  slow_tim_reg_BUFG                      | pmw1/pwm_period_count[0]_i_1_n_0        |                                         |                4 |             15 |         3.75 |
+|  slow_tim_reg_BUFG                      | USN_READ_IBUF                           | usm1/usn_hold_time                      |                4 |             16 |         4.00 |
+|  slow_tim_reg_BUFG                      | usm1/usn_period_count[0]_i_1_n_0        |                                         |                4 |             16 |         4.00 |
+|  CLK_IBUF_BUFG                          | usm1/usn_read_done                      |                                         |                5 |             16 |         3.20 |
+|  CLK_IBUF_BUFG                          | ctrl1/center_distance[0]_i_1_n_0        |                                         |                4 |             16 |         4.00 |
+|  CLK_IBUF_BUFG                          | segt1/slow_cnt[0]_i_1_n_0               |                                         |                5 |             18 |         3.60 |
+|  CLK_IBUF_BUFG                          |                                         |                                         |               40 |             75 |         1.88 |
++-----------------------------------------+-----------------------------------------+-----------------------------------------+------------------+----------------+--------------+
+
+

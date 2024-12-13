@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1732813927" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/final_proj.dcp">
+  <File Type="PA-TCL" Name="final_proj.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="final_proj_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="final_proj_reports.tcl"/>
+  <File Type="RDS-RDS" Name="final_proj.vds"/>
+  <File Type="RDS-UTIL" Name="final_proj_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="final_proj_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="final_proj.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="final_proj_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="final_proj_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/ip/clk_wiz_0/clk_wiz_0.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../finial/finial.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci"/>
+        <Attr Name="ImportTime" Val="1732748769"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/projects/finial_project/finial_project.srcs/sources_1/imports/Downloads/CTRL.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../finial/finial.srcs/sources_1/imports/projects/finial_project/finial_project.srcs/sources_1/imports/Downloads/CTRL.v"/>
+        <Attr Name="ImportTime" Val="1732566602"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/projects/finial_project/finial_project.srcs/sources_1/imports/Downloads/PWM.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../finial/finial.srcs/sources_1/imports/projects/finial_project/finial_project.srcs/sources_1/imports/Downloads/PWM.v"/>
+        <Attr Name="ImportTime" Val="1732560597"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/projects/finial_project/finial_project.srcs/sources_1/imports/Downloads/USM.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../finial/finial.srcs/sources_1/imports/projects/finial_project/finial_project.srcs/sources_1/imports/Downloads/USM.v"/>
+        <Attr Name="ImportTime" Val="1732560593"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/projects/finial_vga/finial_vga.srcs/sources_1/new/font_rom.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../finial/finial.srcs/sources_1/imports/projects/finial_vga/finial_vga.srcs/sources_1/new/font_rom.v"/>
+        <Attr Name="ImportTime" Val="1732747824"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/projects/finial_project/finial_project.srcs/sources_1/imports/Downloads/microsecond_timer.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../finial/finial.srcs/sources_1/imports/projects/finial_project/finial_project.srcs/sources_1/imports/Downloads/microsecond_timer.v"/>
+        <Attr Name="ImportTime" Val="1732560603"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/projects/finial_project/finial_project.srcs/sources_1/imports/Downloads/millisecond_timer.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../finial/finial.srcs/sources_1/imports/projects/finial_project/finial_project.srcs/sources_1/imports/Downloads/millisecond_timer.v"/>
+        <Attr Name="ImportTime" Val="1732560595"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/projects/finial_project/finial_project.srcs/sources_1/imports/Downloads/seg_timer.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../finial/finial.srcs/sources_1/imports/projects/finial_project/finial_project.srcs/sources_1/imports/Downloads/seg_timer.v"/>
+        <Attr Name="ImportTime" Val="1732560599"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/new/vgaTop.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../finial/finial.srcs/sources_1/new/vgaTop.v"/>
+        <Attr Name="ImportTime" Val="1732748204"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/projects/finial_vga/finial_vga.srcs/sources_1/new/vgasync.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../finial/finial.srcs/sources_1/imports/projects/finial_vga/finial_vga.srcs/sources_1/new/vgasync.v"/>
+        <Attr Name="ImportTime" Val="1732744204"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/projects/finial_project/finial_project.srcs/sources_1/imports/Downloads/final_proj.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../finial/finial.srcs/sources_1/imports/projects/finial_project/finial_project.srcs/sources_1/imports/Downloads/final_proj.v"/>
+        <Attr Name="ImportTime" Val="1732748690"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="final_proj"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/Downloads/final_proj.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../finial/finial.srcs/constrs_1/imports/Downloads/final_proj.xdc"/>
+        <Attr Name="ImportTime" Val="1732748388"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/final_proj.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

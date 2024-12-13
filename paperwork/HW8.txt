@@ -1,0 +1,157 @@
+/// top.sv
+`timescale 1ns/10ps
+module counting_state_machine
+  #
+  (
+   parameter NUM_SEGMENTS = 8,
+   parameter CLK_PER      = 10,   // Clock period in ns
+   parameter REFR_RATE    = 1000, // Refresh rate in Hz
+   parameter ASYNC_BUTTON = "SAFE" // "CLOCK", "NOCLOCK", "SAFE", "DEBOUNCE"
+   )
+  (
+   input wire                      clk,
+   input wire                      BTNC,    // Change state
+   input wire                      CPU_RESETN,
+   input wire [2:0]                SW,      // Switch inputs: SW[15:11] for address, SW[7:0] for data
+   output logic [NUM_SEGMENTS-1:0] anode,
+   output logic [7:0]              cathode
+   );
+   
+  logic [NUM_SEGMENTS-1:0][3:0]       encoded;
+  logic [NUM_SEGMENTS-1:0]            digit_point;
+  logic                               reset;
+
+  seven_segment
+    #
+    (
+     .NUM_SEGMENTS (NUM_SEGMENTS),
+     .CLK_PER      (CLK_PER),   // Clock period in ns
+     .REFR_RATE    (REFR_RATE)  // Refresh rate in Hz
+     )
+  u_7seg
+    (
+     .clk          (clk),
+     .reset        (reset),
+     .encoded      (encoded),
+     .digit_point  (digit_point),
+     .anode        (anode),
+     .cathode      (cathode)
+     );
+
+
+   /** Program specific logic goes here **/ 
+
+
+   // Seven-segment display encoding
+  always @(posedge clk) begin
+    if (button_down) begin
+      encoded[4] <= Z; 
+      encoded[0] <= next_state;
+    end
+    if (!CPU_RESETN) begin
+      encoded <= 4'b0000;  // Reset encoded display
+    end
+  end
+
+endmodule
+
+
+
+
+// seven_segment.sv
+//
+// Encapsulate multiple seven segment displays using the cathode driver plus an
+// anode driver.
+`timescale 1ns/10ps
+module seven_segment
+  #
+  (
+   parameter NUM_SEGMENTS = 8,
+   parameter CLK_PER      = 10,  // Clock period in ns
+   parameter REFR_RATE    = 1000 // Refresh rate in Hz
+   )
+  (
+   input wire                         clk,
+   input wire                         reset, // active high reset
+   input wire [NUM_SEGMENTS-1:0][3:0] encoded,
+   input wire [NUM_SEGMENTS-1:0]      digit_point,
+   output logic [NUM_SEGMENTS-1:0]    anode,
+   output logic [7:0]                 cathode
+   );
+
+  localparam INTERVAL = int'(100000000 / (CLK_PER * REFR_RATE));
+
+  logic [$clog2(INTERVAL)-1:0]        refresh_count;
+  logic [$clog2(NUM_SEGMENTS)-1:0]    anode_count;
+  logic [NUM_SEGMENTS-1:0][7:0]       segments;
+
+  cathode_top ct[NUM_SEGMENTS]
+    (
+     .clk        (clk),
+     .encoded    (encoded),
+     .digit_point(digit_point),
+     .cathode    (segments)
+     );
+
+  initial begin
+    refresh_count = '0;
+    anode_count   = '0;
+  end
+
+  always @(posedge clk) begin
+    if (refresh_count == INTERVAL) begin
+      refresh_count          <= '0;
+      anode_count            <= anode_count + 1'b1;
+    end else refresh_count <= refresh_count + 1'b1;
+    anode                    <= '1;
+    anode[anode_count]       <= '0;
+    cathode                  <= segments[anode_count];
+    if (reset) begin
+      refresh_count          <= '0;
+      anode_count            <= '0;
+    end
+  end
+
+endmodule
+
+
+
+
+// cathode_top.sv
+// ------------------------------------
+// Drive the cathodes of 7 segment display
+// ------------------------------------
+//
+// input the encoded value from 0-F and generate the cathode signals
+`timescale 1ns/10ps
+module cathode_top
+  (
+   input wire         clk,
+   input wire [3:0]   encoded,
+   input wire         digit_point,
+   output logic [7:0] cathode
+   );
+
+  always_ff @(posedge clk) begin
+    cathode[7] <= digit_point;
+    case (encoded)
+      4'h0: cathode[6:0] <= 7'b1000000;
+      4'h1: cathode[6:0] <= 7'b1111001;
+      4'h2: cathode[6:0] <= 7'b0100100;
+      4'h3: cathode[6:0] <= 7'b0110000;
+      4'h4: cathode[6:0] <= 7'b0011001;
+      4'h5: cathode[6:0] <= 7'b0010010;
+      4'h6: cathode[6:0] <= 7'b0000010;
+      4'h7: cathode[6:0] <= 7'b1111000;
+      4'h8: cathode[6:0] <= 7'b0000000;
+      4'h9: cathode[6:0] <= 7'b0010000;
+      4'hA: cathode[6:0] <= 7'b0001000;
+      4'hB: cathode[6:0] <= 7'b0000011;
+      4'hC: cathode[6:0] <= 7'b1000110;
+      4'hD: cathode[6:0] <= 7'b0100001;
+      4'hE: cathode[6:0] <= 7'b0000110;
+      4'hF: cathode[6:0] <= 7'b0001110;
+    endcase
+  end
+
+endmodule
